@@ -1,0 +1,29 @@
+{
+  "name": "competitive-programming",
+  "version": "1.0.0",
+  "description": "competitive-programming , coding questions, algorythms ,data structure",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rachitgupta98/competitive-programming.git"
+  },
+  "keywords": [
+    "competitive-programming",
+    "coding",
+    "questions",
+    "algorythms",
+    "data",
+    "structure",
+    "c++",
+    "cpp"
+  ],
+  "author": "Rachit",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rachitgupta98/competitive-programming/issues"
+  },
+  "homepage": "https://github.com/rachitgupta98/competitive-programming#readme"
+}
