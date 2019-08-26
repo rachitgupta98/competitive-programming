@@ -32,12 +32,12 @@ int main()
     {
         if (k.count(s[j]))
         {
-            k.erase(s[i]);
+            k.erase(s[i]); //erasing first char from set if charcter exist in set
             i++;
         }
         else
         {
-            k.insert(s[j]);
+            k.insert(s[j]); //inserting in set
             j++;
             res = max(res, j - i);
         }
