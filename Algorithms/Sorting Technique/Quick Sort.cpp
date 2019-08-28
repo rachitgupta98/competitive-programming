@@ -1,8 +1,8 @@
 // Tutorial --> https://www.hackerearth.com/practice/algorithms/sorting/quick-sort/tutorial/
 
-/* The worst case time complexity of this algorithm is o(n^2) when array is already sorted ,
-best case time complexity is o(nlogn) when we use middle element as pivot 
-averaeg case time complexity also o(logn)
+/* The worst case time complexity of this algorithm is (n^2) when array is already sorted ,
+best case time complexity is (nlogn) when we use middle element as pivot 
+average case time complexity also (logn)
 but as this is randomized algorithm, 
 its time complexity fluctuates between o(n^2) and o(nlogn) and mostly it comes out to be o(nlogn) */
 
