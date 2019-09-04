@@ -1,16 +1,17 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+#define MAX 20000
 void addEdges(vector<vector<int>> &v, int s, int e)
 {
     v[s].push_back(e);
+    v[e].push_back(s);
 }
 
 void BFS(vector<vector<int>> &v, int s)
 {
 
     queue<int> q;
-    vector<bool> visited(v.size(), false);
+    vector<bool> visited(MAX, false);
     q.push(s);
     visited[s] = true;
     while (!q.empty())
@@ -34,7 +35,7 @@ int main()
 
     int vertex, edges, source;
     cin >> vertex >> edges >> source; //no of vertex,no of edges, source from where BFS to start
-    vector<vector<int>> v(vertex + 1);
+    vector<vector<int>> v(MAX);
     for (int i = 0; i < edges; i++)
     {
         int p, q;
