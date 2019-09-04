@@ -21,7 +21,9 @@ int main()
         r = p / w;
         m.push_back(make_pair(r, make_pair(p, w)));
     }
+    //sorting the profit/weight ratio in descending order
     sort(m.begin(), m.end(), sort_in_rev);
+
     // for(int i=0;i<n;i++){
     //     cout<<m[i].first<<" "<<m[i].second.first<<" "<<m[i].second.second<<"\n";
     // }
