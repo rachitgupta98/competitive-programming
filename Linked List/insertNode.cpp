@@ -86,3 +86,142 @@ int main()
     printLinkedList(root);
     return 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include <bits/stdc++.h> 
+#include <stack>
+using namespace std; 
+
+struct node{
+    int data;
+    node *next;
+};  
+node *A =NULL;
+
+void insertAtFront(int n){
+    node *temp = new node();
+    temp->data= n;
+    temp->next = A;
+    A = temp;
+}
+void insertAtBack(int d){
+    node *temp = new node();
+    temp->data = d;
+    temp->next = NULL;
+    node *h = A;
+    while(h->next!=NULL){
+        h=h->next;
+    }
+    h->next = temp;
+    
+}
+void insertAtPosition(int s, int p){
+    node *temp = new node();
+    temp->data = s;
+    temp->next = NULL;
+    node *h = A;
+    for(int i=0;i<p-2;i++){
+        h=h->next;
+    }
+    temp->next=h->next;
+    h->next=temp;
+    
+}
+  void display(){
+      node *h;
+      h=A;
+      while(h!=NULL){
+          cout<<h->data<<endl;
+           h=h->next;
+      }
+     
+  }
+  void deleteNode( int p){
+      node *h = A;
+      for(int i=0;i<p-2;i++){
+          h=h->next;
+      }
+      h->next = h->next->next;
+      
+      
+  }
+  void deteleAtFront(){
+      node *temp = A;
+      A=A->next;
+      free(temp);
+       
+  }
+  void reverse(){
+      
+      stack<struct node*>S;
+      node *temp = A;
+      while(temp!=NULL){
+          S.push(temp);
+          temp = temp->next;
+      }
+      temp = S.top();
+      A = temp;
+      S.pop();
+      while(!S.empty()){
+          temp->next=S.top();
+          S.pop();
+          temp = temp->next;
+      }
+      temp->next = NULL;
+      
+  }
+  void reverse2(){
+      node *curr,*prev,*n;
+      curr=A;
+      prev=NULL;
+      while(curr!=NULL){
+          n=curr->next;
+          curr->next = prev;
+          prev = curr;
+          curr = n;
+      }
+      A=prev;
+  }
+  void reverseRecursion(node *p){
+      if(p->next==NULL){
+          A=p;
+          return;
+      }
+      reverseRecursion(p->next);
+      node *h = p->next;
+      h->next=p;
+      p->next=NULL;
+  }
+int main(){
+    int t,x;
+    cin>>t;
+    for(int i=0;i<t;i++){
+        cin>>x;
+        insertAtFront(x);
+        //insertAtBack(x);
+    }
+    //  insertAtBack(20);
+    //  insertAtPosition(45,3);
+    // insertAtPosition(45,7);
+    // deleteNode(8);
+    //deteleAtFront();
+    //   reverse2();
+    //reverseRecursion(A);
+    display();
+   
+    
+}
